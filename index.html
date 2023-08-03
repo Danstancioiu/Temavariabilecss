@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <title>utilizare variabile CSS</title>
+<style>
+    /*variabile*/
+        :root {
+            --culoare-mare: blue;
+            --dimensiune-mare: 36px;
+            --stil-mare: underline;
+            
+            --culoare-mica: green;
+            --dimensiune-mica: 20px;
+            --stil-mica: italic;
+
+            --culoare-tabel: brown;
+
+        }
+    /*stilizare tabele*/
+
+         table {
+            border: 3px;
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+           
+        }
+        tr:first-of-type {
+            background-color: var(--culoare-mare);
+            }
+        th:first-of-type {
+            color: white;
+        }
+        th:last-of-type {
+            color: var(--culoare-mica)
+        }
+        td:first-child{
+            color: var(--culoare-tabel);
+        }
+        td:last-child {
+        color: var(--culoare-tabel);
+    }
+        
+
+       /* stilizare texte*/
+        .titlu-mare {
+            color: var(--culoare-mare);
+            font-size: var(--dimensiune-mare);
+            text-decoration: var(--stil-mare);
+            text-align: center;
+        }
+
+        .titlu-mic {
+            color: var(--culoare-mica);
+            font-size: var(--dimensiune-mica);
+            text-decoration: var(--stil-mica);
+            text-align: center;
+        }
+
+        .paragraf {
+            font-size: 18px;
+            font-style: italic;
+            text-align: justify;
+            color: var(--culoare-mica);
+        }
+        /*stilizare linie*/
+        hr {
+            
+            border: 3px solid red;        
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /*stilizare navigatie*/
+        nav {
+            color: var(--culoare-mica);
+            font-size: var(--dimensiune-mica);
+            text-align: center;            
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }    
+        nav li:first-child {
+           color: var(--culoare-tabel);
+           font-size: 36px;
+          
+          
+        }
+        nav li:last-child {
+           color: var(--culoare-tabel);
+           font-size: 14px;
+        }   
+        
+       
+</style>
+
+
+
+            </head>
+            <body>
+
+                <header>
+                    <!--Header navigatie -->
+                    <nav>
+                        
+                        <li><a href="#"> Acasa </a></li> 
+                        <li><a href="#"> Despre </a></li>
+                        <li><a href="#"> Contact </a></li>
+                                               
+                    </nav>
+                </header>
+
+                <!-------Linie -->
+                <hr>
+             <div>
+                <!-------Titluri si tabele -->    
+                <h1 class="titlu-mare"> Tabel cu utilizatori</h1>
+                <p class="paragraf"> Aici puteti gasi toti utilizatorii bazei de date </p>
+
+                <hr>
+                
+                <table border="3">
+                    <tr>
+                        <th> Nume </th>
+                        <th> Prenume </th>
+                        <th> Varsta </th>
+                        <th> Ocupatia </th>
+
+                    </tr>
+                    <tr> 
+                        <td> Stancioiu </td>
+                        <td> Dan </td>
+                        <td> 47 </td>
+                        <td> Pensionar </td>
+
+                    </tr>
+                    <td> Popa </td>
+                    <td> Ioan </td>
+                    <td> 28 </td>
+                    <td> Inginer sisteme</td>
+
+                </table>
+
+                    <br>
+
+                    <h2 class="titlu-mic"> Utilizatori fara drepturi de admin </h2>
+                    <p class="paragraf"> Acesti utilizatori doar pot accesa baza de date </p>
+    
+                    <table border="3">
+                        <tr>
+                            <th> Nume </th>
+                            <th> Prenume </th>
+                            <th> Varsta </th>
+                            <th> Ocupatia </th>
+    
+                        </tr>
+                        <tr> 
+                            <td> Popa </td>
+                            <td> Ioan </td>
+                            <td> 40 </td>
+                            <td> Contabil </td>
+    
+                        </tr>
+                        <td> Popa </td>
+                        <td> Darius </td>
+                        <td> 25 </td>
+                        <td> Operator</td>
+    
+                  </table>
+            </div>
+        </body>
+ </html>
